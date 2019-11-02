@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { daysOfTheWeek } from '../utils';
 
 const Wrapper = styled.div`
     flex-grow: 1;
@@ -44,17 +45,22 @@ const UTCOffset = styled.p`
     text-align: center;
 `;
 
+const displayOffset = offset => {
+    return offset > -1 ? `+${offset}:00` : `${offset}:00`
+}
+
 class Time extends React.Component {
     render(){
+        const { utc_time, search_time, searchData } = this.props;
         return(
             <Wrapper>
                 <ColumnWrapper>
                     <TimeDisplay>
                         <Digits>
-                            {new Date().toLocaleTimeString()}
+                            {utc_time.toLocaleTimeString()}
                         </Digits>
                         <Day>
-                            Saturday
+                            {daysOfTheWeek[utc_time.getDay()]}
                         </Day>
                         <City>
                             London
@@ -64,22 +70,26 @@ class Time extends React.Component {
                         +00:00
                     </UTCOffset>
                 </ColumnWrapper>
-                <ColumnWrapper>
-                    <TimeDisplay>
-                        <Digits>
-                            {new Date().toLocaleTimeString()}
-                        </Digits>
-                        <Day>
-                            Saturday
-                        </Day>
-                        <City>
-                            London
-                        </City>
-                    </TimeDisplay>
-                    <UTCOffset>
-                        +00:00
-                    </UTCOffset>
-                </ColumnWrapper>
+                {searchData.map((res, index) => {
+                    return (
+                        <ColumnWrapper key={index}>
+                            <TimeDisplay>
+                                <Digits>
+                                    {search_time.toLocaleTimeString()}
+                                </Digits>
+                                <Day>
+                                    {daysOfTheWeek[search_time.getDay()]}
+                                </Day>
+                                <City>
+                                    {res.city}
+                                </City>
+                            </TimeDisplay>
+                            <UTCOffset>
+                                {displayOffset(res.offset)}
+                            </UTCOffset>
+                        </ColumnWrapper>
+                    );
+                })}
             </Wrapper>
         );
     }

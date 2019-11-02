@@ -7,9 +7,13 @@
     "start": "webpack-dev-server"
   },
   "dependencies": {
+    "city-timezones": "^1.1.0",
+    "country-timezone": "^1.0.8",
+    "get-timezone-offset": "^1.0.3",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "styled-components": "^4.4.1"
+    "styled-components": "^4.4.1",
+    "timezone-names": "^0.0.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",

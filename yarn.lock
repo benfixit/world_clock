@@ -1522,6 +1522,13 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
+city-timezones@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/city-timezones/-/city-timezones-1.1.0.tgz#f67b8e6d6e59284a38a88227d8af1883e140d366"
+  integrity sha512-3FOK3btpIZV8e6Jv06f0NkkSKgKPAwifKHTVomKsqrM59X7KwgYs3aOFJDS9+eBThMIwUsA4n+rgzu8fZthNaQ==
+  dependencies:
+    lodash ">=4.17.11"
+
 class-utils@^0.3.5:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/class-utils/-/class-utils-0.3.6.tgz#f93369ae8b9a7ce02fd41faad0ca83033190c463"
@@ -1729,6 +1736,11 @@ core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
+country-timezone@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/country-timezone/-/country-timezone-1.0.8.tgz#5082c5905cd2493382c82362ac871691d75be32d"
+  integrity sha512-TkCxa4rMXYZA+BNMW5Nl7jUNLppdqvhKi1FJsvrC6jcRakdrspoyjqyWt4X+udgyCaEvaJq+0ChyFdeEsJL0KQ==
+
 create-ecdh@^4.0.0:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/create-ecdh/-/create-ecdh-4.0.3.tgz#c9111b6f33045c4697f144787f9254cdc77c45ff"
@@ -1844,6 +1856,11 @@ cyclist@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
+
+data-structures@1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/data-structures/-/data-structures-1.4.2.tgz#b134b55ea524b2f4f189b83bfbd67b651ca35332"
+  integrity sha1-sTS1XqUksvTxibg7+9Z7ZRyjUzI=
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
   version "2.6.9"
@@ -2539,6 +2556,11 @@ get-stream@^4.0.0:
   integrity sha512-GMat4EJ5161kIy2HevLlr4luNjBgvmj413KaQA7jt4V8B4RDsfpHk7WQ9GVqfYyyx8OS/L66Kox+rJRNklLK7w==
   dependencies:
     pump "^3.0.0"
+
+get-timezone-offset@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/get-timezone-offset/-/get-timezone-offset-1.0.3.tgz#dc6647421eddab66f65513d2f78c4d3eee51be08"
+  integrity sha1-3GZHQh7dq2b2VRPS94xNPu5Rvgg=
 
 get-value@^2.0.3, get-value@^2.0.6:
   version "2.0.6"
@@ -3300,7 +3322,7 @@ locate-path@^3.0.0:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
 
-lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.3:
+lodash@>=4.17.11, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.3:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
@@ -5096,6 +5118,13 @@ timers-browserify@^2.0.4:
   integrity sha512-60aV6sgJ5YEbzUdn9c8kYGIqOubPoUdqQCul3SBAsRCZ40s6Y5cMcrW4dt3/k/EsbLVJNl9n6Vz3fTc+k2GeKQ==
   dependencies:
     setimmediate "^1.0.4"
+
+timezone-names@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/timezone-names/-/timezone-names-0.0.3.tgz#3ff4ecb82424523f49700db5b388296da501e2f0"
+  integrity sha1-P/TsuCQkUj9JcA21s4gpbaUB4vA=
+  dependencies:
+    data-structures "1.4.2"
 
 to-arraybuffer@^1.0.0:
   version "1.0.1"
