@@ -42,12 +42,13 @@ class App extends React.Component {
 
     tick = () => {
         const { searchResult } = this.state;
-        
-        this.setState({ utc_time: new Date() });
+        const utcTime = new Date();
+        utcTime.setHours(utcTime.getHours() - 1)
+        this.setState({ utc_time: utcTime });
 
         if(searchResult.length > 0){
             const time = new Date();
-            time.setHours(time.getHours() + searchResult[0].offset);
+            time.setHours(time.getHours() + searchResult[0].offset - 1);
             this.setState({
                 search_time: time
             });
